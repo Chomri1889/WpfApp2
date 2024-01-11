@@ -1,0 +1,163 @@
+﻿<Window x:Class="WpfApp2.Rabota"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Rabota" Height="450" Width="800">
+
+    <Window.Resources>
+
+
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#dd9475"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#F6A278"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#dd9475"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#F6A278"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="4" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter"  Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+
+
+        <TabControl Grid.ColumnSpan="2">
+            <TabItem Header="Работодатели">
+                <Grid Background="#004A59">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="291*"/>
+                        <RowDefinition Height="116*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="31*"/>
+                        <ColumnDefinition Width="26*"/>
+                        <ColumnDefinition Width="340*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid  x:Name="dataGrid" Margin="136,72,32,90" Grid.Column="2" AutoGenerateColumns="True" Grid.RowSpan="2">
+
+                    </DataGrid>
+                    <TextBox  x:Name ="clientsearch2"  Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="346,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+                    <Button x:Name ="Poisk_two" FontWeight="Bold" Background="#FFF1EBDD" Grid.Column="2" Content="Поиск" HorizontalAlignment="Left" Height="30" Margin="550,32,0,0" VerticalAlignment="Top" Width="98" Click="Poisk_two_Click"/>
+
+
+
+
+                    <TextBox x:Name ="ID_Box"  HorizontalAlignment="Left" Height="30" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"  Grid.ColumnSpan="3" VerticalContentAlignment="Center" />
+                    <TextBox x:Name ="Code_Box"  HorizontalAlignment="Left" Height="30" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"  Grid.ColumnSpan="3" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="Date_Taking_Box" HorizontalAlignment="Left" Height="30" Margin="10,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"  Grid.ColumnSpan="3" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="Date_Box" HorizontalAlignment="Left" Height="30" Margin="10,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="3" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="Date_Tel" HorizontalAlignment="Left" Height="30" Margin="10,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"  Grid.ColumnSpan="3" VerticalContentAlignment="Center"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="10,22,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="3"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="10,71,0,0" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="3"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="10,120,0,0" TextWrapping="Wrap" Text="Вид деятельности" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="3"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="10,168,0,0" TextWrapping="Wrap" Text="Адрес" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="3"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="10,222,0,0" TextWrapping="Wrap" Text="Телефон" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="3"/>
+                    <Button Background="#FFF1EBDD" FontWeight="Bold" Content="Изменить" HorizontalAlignment="Left" Height="30" Margin="0,281,0,0" VerticalAlignment="Top" Width="96" Click="Izmen_Button_Click" Grid.Column="2" Grid.RowSpan="2"/>
+                    <Button Background="#FFF1EBDD" FontWeight="Bold" Content="Сохранить" HorizontalAlignment="Left" Margin="10,30,0,34" Width="200" Click="Safe_Button_Click" Grid.ColumnSpan="3" Grid.Row="1"/>
+                    <Button Background="#FFF1EBDD" FontWeight="Bold" Content="Удалить" HorizontalAlignment="Left" Height="30" Margin="10,281,0,0" VerticalAlignment="Top" Width="97" Click="Delete_Button_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                    <Button  Background="#FFF1EBDD" FontWeight="Bold" Content="Загрузка Данных" Click="Loading" HorizontalAlignment="Left" Height="51" Margin="136,30,0,0" VerticalAlignment="Top" Width="198" Grid.Column="2" Grid.Row="1"/>
+
+                    <TextBlock HorizontalAlignment="Center" Height="18" Margin="0,119,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top" Width="210"/>
+
+
+                </Grid>
+
+            </TabItem>
+
+
+            <TabItem Header="Соискатель" Margin="-2,-2,-2,2">
+                <Grid Background="#004A59">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="32*"/>
+                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="735*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <DataGrid  x:Name="dataGrid2" Margin="189,69,36,89" AutoGenerateColumns="True" Grid.Column="3"/>
+
+                    <TextBox x:Name ="ID_Soisk" HorizontalAlignment="Left" Height="30" Margin="12,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"  Grid.ColumnSpan="4" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name ="Id_Name"  HorizontalAlignment="Left" Height="30" Margin="10,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Grid.ColumnSpan="4" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="Date_Kvalific" HorizontalAlignment="Left" Height="30" Margin="10,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="4" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="Date_Deat" HorizontalAlignment="Left" Height="30" Margin="10,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"  Grid.ColumnSpan="4" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="Date_Box2" HorizontalAlignment="Left" Height="30" Margin="10,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="4" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="Date_Cen" HorizontalAlignment="Left" Height="30" Margin="10,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="4" VerticalContentAlignment="Center"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="12,50,0,0" TextWrapping="Wrap" Text="Код_соискателя" VerticalAlignment="Top" Width="208" Grid.ColumnSpan="4"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Grid.ColumnSpan="4"><Run Language="ru-ru" Text="Имя"/></TextBlock>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="10,99,0,0" TextWrapping="Wrap" Text="Квалификация" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="4"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="10,152,0,0" TextWrapping="Wrap" Text="Вид_деятельности" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="4"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="10,203,0,0" TextWrapping="Wrap" Text="Иные_данные" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="4"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="19" Margin="10,252,0,0" TextWrapping="Wrap" Text="Предполагаемый размер заработной платы" VerticalAlignment="Top" Width="209" Grid.ColumnSpan="4"/>
+                    <Button Background="#FFF1EBDD" FontWeight="Bold" Content="Изменить" HorizontalAlignment="Left" Height="30" Margin="55,308,0,0" VerticalAlignment="Top" Width="105" Click="Izmenenia_Button_Click" Grid.Column="3"/>
+                    <Button Background="#FFF1EBDD" FontWeight="Bold" Content="Сохранить" HorizontalAlignment="Left" Height="30" Margin="10,343,0,0" VerticalAlignment="Top" Width="209" Click="Safefen_Button_Click" Grid.ColumnSpan="4"/>
+                    <Button Background="#FFF1EBDD" FontWeight="Bold" Content="Удалить" HorizontalAlignment="Left" Height="30" Margin="10,308,0,0" VerticalAlignment="Top" Width="95" Click="Del_Button_Click" Grid.ColumnSpan="4"/>
+
+
+                    <TextBox x:Name ="Two_Name"  HorizontalAlignment="Left" Height="30" Margin="111,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Grid.Column="3" VerticalContentAlignment="Center"/>
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="18" Margin="111,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Grid.Column="3"><Run Language="ru-ru" Text="Фамилия"/></TextBlock>
+                    <TextBox x:Name ="Tree_Name"  HorizontalAlignment="Left" Height="30" Margin="270,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Grid.Column="3" VerticalContentAlignment="Center" />
+                    <TextBlock Foreground="#FFF1EBDD" FontWeight="Bold" HorizontalAlignment="Left" Height="18" Margin="270,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Grid.Column="3"><Run Language="ru-ru" Text="Отчество"/></TextBlock>
+                    <TextBox  x:Name ="clientsearch"  HorizontalAlignment="Left" Height="30" Margin="460,19,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="169" Grid.Column="3" VerticalContentAlignment="Center" />
+                    <Button Background="#FFF1EBDD" FontWeight="Bold" Content="Poisk" HorizontalAlignment="Left" Height="30" Margin="634,19,0,0" VerticalAlignment="Top" Width="65" Grid.Column="3" Click="Poisk"/>
+                    <Button Background="#FFF1EBDD" FontWeight="Bold" Grid.Column="3" Content="Загрузка данных" HorizontalAlignment="Left" Height="35" Margin="291,326,0,0" VerticalAlignment="Top" Width="199" Click="Loading2" BorderThickness="0,1,1,1"/>
+                    <Button Background="#FFF1EBDD" FontWeight="Bold" Grid.Column="3" Content="заключить договор" HorizontalAlignment="Left" Height="35" Margin="499,326,0,0" VerticalAlignment="Top" Width="200" Click="Dogovor_Click"/>
+
+                </Grid>
+
+            </TabItem>
+
+        </TabControl>
+
+
+    </Grid>
+
+</Window>
