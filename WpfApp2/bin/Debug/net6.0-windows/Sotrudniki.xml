@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sotrudniki>
+  <sotrudnik>
+    <ID_TextBox>123</ID_TextBox>
+    <Two_Name>Булгакова</Two_Name>
+    <One_Name>Маргарита</One_Name>
+    <Tree_Name>Евгеньевна</Tree_Name>
+    <Dejat_TextBox>Программист</Dejat_TextBox>
+    <Adress_TextBox>Старший_программист</Adress_TextBox>
+    <Telefon_TextBox>знает английский</Telefon_TextBox>
+    <Telefon_Cent>40$ за проект</Telefon_Cent>
+  </sotrudnik>
+  <sotrudnik>
+    <ID_TextBox>123</ID_TextBox>
+    <Two_Name>qwe</Two_Name>
+    <One_Name>qwe</One_Name>
+    <Tree_Name>qwe</Tree_Name>
+    <Dejat_TextBox>wqdqd</Dejat_TextBox>
+    <Adress_TextBox>123wdqw</Adress_TextBox>
+    <Telefon_TextBox>qdqwd</Telefon_TextBox>
+    <Telefon_Cent>qdqw</Telefon_Cent>
+  </sotrudnik>
+  <sotrudnik>
+    <ID_TextBox>4</ID_TextBox>
+    <Two_Name>scs</Two_Name>
+    <One_Name>scs</One_Name>
+    <Tree_Name>scs</Tree_Name>
+    <Dejat_TextBox>sccs</Dejat_TextBox>
+    <Adress_TextBox>scdsc</Adress_TextBox>
+    <Telefon_TextBox>scsc</Telefon_TextBox>
+    <Telefon_Cent>scsc</Telefon_Cent>
+  </sotrudnik>
+  <sotrudnik>
+    <ID_TextBox>Анатолий</ID_TextBox>
+    <Two_Name></Two_Name>
+    <One_Name></One_Name>
+    <Tree_Name></Tree_Name>
+    <Dejat_TextBox></Dejat_TextBox>
+    <Adress_TextBox></Adress_TextBox>
+    <Telefon_TextBox></Telefon_TextBox>
+    <Telefon_Cent></Telefon_Cent>
+  </sotrudnik>
+  <sotrudnik>
+    <ID_TextBox>fvgh</ID_TextBox>
+    <Two_Name>vnb</Two_Name>
+    <One_Name>dcfg</One_Name>
+    <Tree_Name>gh</Tree_Name>
+    <Dejat_TextBox></Dejat_TextBox>
+    <Adress_TextBox></Adress_TextBox>
+    <Telefon_TextBox></Telefon_TextBox>
+    <Telefon_Cent></Telefon_Cent>
+  </sotrudnik>
+</sotrudniki>

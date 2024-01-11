@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rabotad>
+  <rabota>
+    <ID_Rab>1</ID_Rab>
+    <ID_Name>Фёдоров А.С.</ID_Name>
+    <Vid_Deat>Главный маркетолог</Vid_Deat>
+    <ID_Adres>Марксиская 2А</ID_Adres>
+    <ID_Telefon>+7 912 433 54</ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab>2</ID_Rab>
+    <ID_Name>Пушкин Б.Н.</ID_Name>
+    <Vid_Deat>Руководитель компании "Садовод"</Vid_Deat>
+    <ID_Adres>Священская 67 корпус 3</ID_Adres>
+    <ID_Telefon>+7 324 453 94</ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab>5</ID_Rab>
+    <ID_Name>Зверева А.В.</ID_Name>
+    <Vid_Deat>Заместитель компании "праздник-праздник-праздник"</Vid_Deat>
+    <ID_Adres>Шарикова 56Р</ID_Adres>
+    <ID_Telefon>+7 777 413 77</ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab>7</ID_Rab>
+    <ID_Name>Журавлёва Д.В.</ID_Name>
+    <Vid_Deat>Менеджер отдела Типографики</Vid_Deat>
+    <ID_Adres>Улица Ручковская</ID_Adres>
+    <ID_Telefon>+7 012 510 71</ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab>12e2</ID_Rab>
+    <ID_Name>12e1e</ID_Name>
+    <Vid_Deat>1e1e</Vid_Deat>
+    <ID_Adres>1e1e</ID_Adres>
+    <ID_Telefon>1e1e</ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab>23</ID_Rab>
+    <ID_Name></ID_Name>
+    <Vid_Deat></Vid_Deat>
+    <ID_Adres></ID_Adres>
+    <ID_Telefon></ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab>fhf</ID_Rab>
+    <ID_Name>nkn</ID_Name>
+    <Vid_Deat>lnn</Vid_Deat>
+    <ID_Adres>nknk</ID_Adres>
+    <ID_Telefon>nkl</ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab>123</ID_Rab>
+    <ID_Name>sf</ID_Name>
+    <Vid_Deat>sfsf</Vid_Deat>
+    <ID_Adres>sfsf</ID_Adres>
+    <ID_Telefon>sfsf</ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab>123</ID_Rab>
+    <ID_Name>DSa</ID_Name>
+    <Vid_Deat>dsa</Vid_Deat>
+    <ID_Adres>das</ID_Adres>
+    <ID_Telefon>dsa</ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab></ID_Rab>
+    <ID_Name></ID_Name>
+    <Vid_Deat></Vid_Deat>
+    <ID_Adres></ID_Adres>
+    <ID_Telefon></ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab></ID_Rab>
+    <ID_Name></ID_Name>
+    <Vid_Deat></Vid_Deat>
+    <ID_Adres></ID_Adres>
+    <ID_Telefon></ID_Telefon>
+  </rabota>
+  <rabota>
+    <ID_Rab></ID_Rab>
+    <ID_Name></ID_Name>
+    <Vid_Deat></Vid_Deat>
+    <ID_Adres></ID_Adres>
+    <ID_Telefon></ID_Telefon>
+  </rabota>
+</rabotad>

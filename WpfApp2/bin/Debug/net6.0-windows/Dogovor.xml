@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+  <book>
+    <ID>1</ID>
+    <Name>Преступление и наказание</Name>
+    <Autor>Достоевский</Autor>
+    <BookingPrice>600</BookingPrice>
+    <Price>2000</Price>
+    <Genre>Роман</Genre>
+  </book>
+  <book>
+    <ID>2</ID>
+    <Name>п</Name>
+    <Autor>п</Autor>
+    <Genre>п</Genre>
+    <BookingPrice>п</BookingPrice>
+    <Price>п</Price>
+  </book>
+  <dogovor>
+    <ID_sotridnik>4</ID>
+    <ID_rabota>Палата номер 6</Name>
+    <Dol>верстальщик</Dol>
+    <Comission>450</Comission>
+  </dogovor>
+  <book>
+    <ID>5</ID>
+    <Name>Мастер и Маргарита</Name>
+    <Autor>Булгаков</Autor>
+    <BookingPrice>400</BookingPrice>
+    <Price>1700</Price>
+    <Genre>Сатира</Genre>
+  </book>
+  <book>
+    <ID>6</ID>
+    <Name>п</Name>
+    <Autor>п</Autor>
+    <Genre>п</Genre>
+    <BookingPrice>п</BookingPrice>
+    <Price>п</Price>
+  </book>
+</books>
